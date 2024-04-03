@@ -4,6 +4,7 @@
 #custom ignore
 *.pdf
 *.json
+*.twbx
 
 ### Database ###
 *.accdb

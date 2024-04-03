@@ -1,0 +1,14 @@
+2024.4.1
+
+Part2. 응용 막대 차트 만들기 
+
+1. 누적 막대차트 
+
+2. Butterfly 차트
+
+Alt +a+c Create Calculated Field
+IF [지역 (group)] = "수도권" then [매출] else - [매출] END
+
+IIF([지역 (group)]="수도권", 매출, -매출)
+
+if year([주문 일자])=2018 then [매출] END
