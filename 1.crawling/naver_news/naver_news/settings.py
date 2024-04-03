@@ -11,7 +11,7 @@ BOT_NAME = "naver_news"
 
 SPIDER_MODULES = ["naver_news.spiders"]
 NEWSPIDER_MODULE = "naver_news.spiders"
-
+LOG_LEVEL = 'INFO'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "naver_news (+http://www.yourdomain.com)"
