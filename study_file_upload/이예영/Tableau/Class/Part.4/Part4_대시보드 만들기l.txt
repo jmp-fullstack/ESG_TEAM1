@@ -1,0 +1,19 @@
+2024-4-4
+
+1. 막대로 대시보드 만들기 
+막대차트를 이동해서 필터액션을 확인
+
+2. 연/분기/ 월 매출 대시보드 만들기
+다양한 대시보드 만들고 하이라이트 테이블
+Dashboard - Actions -(Hightlight)Add Action
+상단의 연간을 클릭했을때 연월과 분기가 하이라이트 처리됨
+
+3. 테이블로 대시보드 만들기 
+
+매출,수량,수익 shift로 다 전체선택하고 삼각형 누르면 
+Quick Table Calculation-Percent Difference
+
+텍스트 측정값 블럭을 cntrl누르고 컬러에 넣으면 컬러의 측정값
+삼각형 - Use Seperate Legends(별도의 색상값)
+
+대시보드 두개를 만든다음 alt 클릭했을 때 상단의 버튼을 사용해서 페이지 이동 
