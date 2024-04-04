@@ -5,6 +5,8 @@
 *.pdf
 *.json
 *.twbx
+*config*
+
 
 ### Database ###
 *.accdb
