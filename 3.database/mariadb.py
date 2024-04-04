@@ -1,23 +1,40 @@
 try:
     import pymysql
 except:
-    print('pip install pymysql 하세요')
+    print('you need to install pymysql\n$ : python -m pip install pymysql')
 import traceback
-from typing import Union
+
+from typing import Iterable, Union
 
 class MariaDB:
+    """
+    MariaDB
+    """
 
-    def __init__(self,db_config:dict,) -> None:
+    def __init__(self, db_config:dict, cursor_type="tuple") -> None:
         """
-        db_config = {
-        host= '사용할 컴퓨터',
-        user= '사용자 계정',
-        password = '비밀번호'
-        database= '사용할 데이터베이스',
-        charset='utf8mb4' 
-        )}
+        생성자 메서드
+        인스턴스 생성 시 db_config를 전달받아 DB에 연결합니다.
+        
+        **db_config**
+            host=database host (localhost)
+            port=port (3306)
+            user=username (root)
+            password=password (1q2w3e)
+            database=database name (testdb)
+            charset=charcter encoding (utf8mb4)
+        
         """
+
+        db_config['port'] = int(db_config.get('port', '3306'))
         self.DB = pymysql.connect(**db_config)
+
+        if cursor_type == 'dict':
+            self.cursor_type = pymysql.cursors.DictCursor
+        else:
+            self.cursor_type = None
+            
+        return
     
     def __del__(self):
         """
