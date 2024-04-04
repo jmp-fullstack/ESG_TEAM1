@@ -1,0 +1,37 @@
+처음 MariaDB 접속하실때
+
+
+** 이 코드 사용 **
+with open('{파일경로}','r') as file:
+    lines = file.readlines()
+    db_config = {l.split('=')[0]: l.split('=')[-1].strip() for l in lines}
+
+
+
+** 사용 후 db_config의 구성 **
+db_config = {
+        'host': 'localhost',
+        'user': 'root',
+        'password': 'password',
+        'database': 'test_db',
+        'charset': 'utf8mb4'
+    }
+    
+
+
+** 인스턴스 생성 하시면 MariaDB 함수 사용 가능 **
+db = MariaDB(db_config)
+
+
+
+** 삽입할 데이터 준비 (밑에는 사용법 예시)**  
+table = "Atable"
+columns = "name, email, phone"
+values = ('John Doe', 'john@example.com', '123-456-7890')
+result = db.insert(table, columns, values)
+
+
+
+** Maria class에 어떤 함수가 있는지 궁금할때  **
+* MariaDB 클래스의 메서드 확인
+print(dir(MariaDB))

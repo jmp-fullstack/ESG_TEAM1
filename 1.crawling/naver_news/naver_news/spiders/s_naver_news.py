@@ -4,25 +4,25 @@ import json
 import os
 import re
 
-class NaverNewsSpider(scrapy.Spider):
-    name = "naver_news"
+class s_naver_news(scrapy.Spider):
+    name = "s_naver_news"
 
     def start_requests(self):
-        os.chdir('./naver_news')
-        with open('./E_key_words.txt', encoding='utf-8') as f:
-            e_list = [lines.rstrip() for lines in f.readlines()]
+        os.chdir('./naver_news/keywords')
+        with open('./S_key_words.txt', encoding='utf-8') as f:
+            s_list = [lines.rstrip() for lines in f.readlines()]
         with open('./top200_name_list.csv', encoding='utf-8') as f:
             companys = [lines.rstrip() for lines in f.readlines()]
 
         for cp in companys :
-            for e in e_list :
-                keyword = (f'{cp} {e}')
+            for s in s_list :
+                keyword = (f'{cp} {s}')
                 for url_num in range(1,11,10):  # 10의 배수로 갯수 지정
                     url_num = str(url_num)
                     jq_url = f'https://s.search.naver.com/p/newssearch/search.naver?cluster_rank={url_num}&de=&ds=&eid=&field=0&force_original=&is_dts=0&is_sug_officeid=0&mynews=0&news_office_checked=&\
                         nlu_query=&nqx_theme=%7B%22theme%22%3A%7B%22main%22%3A%7B%22name%22%3A%22site%22%2C%22score%22%3A%220.831540%22%7D%7D%7D&nso=%26nso%3Dso%3Ar%2Cp%3Aall%2Ca%3Aall&nx_and_query=\
                         &nx_search_hlquery=&nx_search_query=&nx_sub_query=&office_category=0&office_section_code=0&office_type=0&pd=0&photo=0&query={keyword}&query_original=&service_area=0&sort=1&spq=0&start={url_num}&where=news_tab_api&nso=so:r,p:all,a:all'
-                    yield scrapy.Request(url=jq_url, callback=self.url_parse, meta={'company': cp, 'keyword': e})
+                    yield scrapy.Request(url=jq_url, callback=self.url_parse, meta={'company': cp, 'keyword': s})
 
     def url_parse(self, response):
         # 자바쿼리형식에서 제이슨 형태로 처리
@@ -110,6 +110,3 @@ class NaverNewsSpider(scrapy.Spider):
             pass
         else:
             print(company, keyword, clean_sent , sep='\n')
-
-
-        
