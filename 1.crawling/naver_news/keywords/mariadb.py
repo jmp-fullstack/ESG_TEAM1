@@ -5,7 +5,8 @@ except:
     exit()
 import traceback
 
-from typing import Iterable, Union
+from typing import Iterable
+from typing import Union
 
 class MariaDB:
     """
@@ -83,7 +84,7 @@ class MariaDB:
         """
 
         sql_qr = f"INSERT INTO {table}({columns}) " \
-                  "VALUES (" +','.join(["%s"]*len(columns)) +")"
+                  "VALUES (" +','.join(["%s"]*len(value)) +")"
         # args = values
         
         try:
