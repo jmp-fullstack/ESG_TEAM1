@@ -2,9 +2,11 @@ try:
     import pymysql
 except:
     print('you need to install pymysql\n$ : python -m pip install pymysql')
+    exit()
 import traceback
 
-from typing import Iterable, Union
+from typing import Iterable
+from typing import Union
 
 class MariaDB:
     """
@@ -23,7 +25,6 @@ class MariaDB:
             password=password (1q2w3e)
             database=database name (testdb)
             charset=charcter encoding (utf8mb4)
-        
         """
 
         db_config['port'] = int(db_config.get('port', '3306'))

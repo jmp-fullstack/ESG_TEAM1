@@ -1,23 +1,30 @@
 import scrapy
 from bs4 import BeautifulSoup
 import json
-import os
 import re
+from keywords.mariadb import MariaDB
+
+with open('./keywords/aws_config','r') as file:
+    lines = file.readlines()
+    db_config = {l.split('=')[0]: l.split('=')[-1].strip() for l in lines}
+    DB = MariaDB(db_config)
+
+with open('./keywords/E_key_words.txt', encoding='utf-8') as keyword_f:
+    e_list = [lines.rstrip() for lines in keyword_f.readlines()]
+
+with open('./keywords/top200_name_list.csv', encoding='utf-8') as company_f:
+    companys = [lines.rstrip() for lines in company_f.readlines()]
+
+
 
 class e_naver_news(scrapy.Spider):
     name = "e_naver_news"
 
     def start_requests(self):
-        os.chdir('./naver_news/keywords')
-        with open('./E_key_words.txt', encoding='utf-8') as f:
-            e_list = [lines.rstrip() for lines in f.readlines()]
-        with open('./top200_name_list.csv', encoding='utf-8') as f:
-            companys = [lines.rstrip() for lines in f.readlines()]
-
         for cp in companys :
             for e in e_list :
                 keyword = (f'{cp} {e}')
-                for url_num in range(1,11,10):  # 10의 배수로 갯수 지정
+                for url_num in range(1,100,10):  # 10의 배수로 갯수 지정
                     url_num = str(url_num)
                     jq_url = f'https://s.search.naver.com/p/newssearch/search.naver?cluster_rank={url_num}&de=&ds=&eid=&field=0&force_original=&is_dts=0&is_sug_officeid=0&mynews=0&news_office_checked=&\
                         nlu_query=&nqx_theme=%7B%22theme%22%3A%7B%22main%22%3A%7B%22name%22%3A%22site%22%2C%22score%22%3A%220.831540%22%7D%7D%7D&nso=%26nso%3Dso%3Ar%2Cp%3Aall%2Ca%3Aall&nx_and_query=\
@@ -43,7 +50,7 @@ class e_naver_news(scrapy.Spider):
 
     def parse(self, response):
         company = response.meta['company']
-        keyword = response.meta['keyword']
+        # keyword = response.meta['keyword']
 
         # 제목
         title = response.css('#title_area span::text').get()
@@ -53,30 +60,28 @@ class e_naver_news(scrapy.Spider):
         date_str = date[0].get() if date else None  # date가 None이 아닐 때만 date_str에 값을 할당
         if date_str:
             if '. ' in date_str:
-                date = date_str.split('. ')[0]
+                date = date_str.split('. ')[0].split('.')[0]
             else:
-                date = date_str.split(' ')[0]
+                date = date_str.split(' ')[0].split('.')[0]
         else:
             date = None
 
         # 본문
         selectors = response.css('article::text')
         contents = [selector.get().strip() for selector in selectors if selector.get().strip()]
-        with open('./E_key_words.txt', encoding='utf-8') as file:
-            e_kw_list = [lines.rstrip() for lines in file.readlines()]
 
         # 문장 분리
-        content_list = []
-        for sentence in contents:
-            sentences = re.split(r'(?<=\w)\.', sentence)
-            for s in sentences:
-                if s != '':
-                    content_list.append(s.strip())
+        # content_list = []
+        # for sentence in contents:
+        #     sentences = re.split(r'(?<=\w)\.', sentence)
+        #     for s in sentences:
+        #         if s != '':
+        #             content_list.append(s.strip())
 
         # 키워드 문장만 가져옴
         sentence_list = []
-        for content in content_list:
-            for e_kw in e_kw_list:
+        for content in contents:
+            for e_kw in e_list:
                 if e_kw in content:
                     sentence_list.append(content)
                     break
@@ -91,7 +96,7 @@ class e_naver_news(scrapy.Spider):
         patten_7 = '\[.*?뉴스]'
         patten_8 = '[\d]'
         patten_9 = '.*(검사부|실장|부장|부사장|상무|팀장|책임연구원|본부장|선임연구원|총무부|부서장|지원센터장|총괄|총무|검사|비서실|재난관리|단장|사업|디렉터|승무원|총무부|수석|부총재|인사부|인사|상무|총무본부|전무|사장|수석연구원|총무|상무|연구원장|부서|사원|감사관|차장|처장|감사관).*'
-        patten_last = '[^\w\s]'
+        patten_last = '[^\w\s^.]'
         
         for i, sentence in enumerate(sentence_list):
             sentence = re.sub(patten_1, '', sentence)
@@ -106,10 +111,18 @@ class e_naver_news(scrapy.Spider):
             sentence = re.sub(patten_last, '', sentence)
             sentence_list[i] = sentence
         clean_sent = [sentence for sentence in sentence_list if sentence != '']
+
+
         if clean_sent == []:
             pass
         else:
-            print(company, keyword, clean_sent , sep='\n')
+            print(clean_sent)
+            # print(company, date, title, clean_sent, response.url,'e', sep ='\n')
+            sentence = ','.join(clean_sent)
+            url = str(response.url)
+            values = (company, date, title, sentence, url,'e')
+            DB.insert('tb_news','`company`, `date`, `title`, `sentence`, `page_url`, `esg`', values)
+
 
 
         
