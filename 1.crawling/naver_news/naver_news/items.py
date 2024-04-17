@@ -7,5 +7,8 @@ import scrapy
 
 
 class NaverNewsItem(scrapy.Item):
+    company = scrapy.Field()
     date = scrapy.Field()
+    url = scrapy.Field()
+    title = scrapy.Field()
     content = scrapy.Field()

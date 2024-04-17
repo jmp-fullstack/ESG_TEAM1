@@ -18,7 +18,9 @@ LOG_LEVEL = 'INFO'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
-
+AUTOTHROTTLE_ENABLED = True
+AUTOTHROTTLE_START_DELAY = 5
+AUTOTHROTTLE_MAX_DELAY = 60
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
