@@ -1,0 +1,554 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0308.0326                               -->
+<workbook original-version='18.1' source-build='2024.1.1 (20241.24.0308.0326)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Sheet1+ (Multiple Connections)' inline='true' name='federated.0ks54c31e410qo1ccty1i0k2b73g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='database-1.cneyqkmiuo7h.ap-northeast-2.rds.amazonaws.com' name='mariadb.0s6ozgc0ydobot1a0em8i18qs4zg'>
+            <connection class='mariadb' dbname='db_esg_project' one-time-sql='' port='3306' server='database-1.cneyqkmiuo7h.ap-northeast-2.rds.amazonaws.com' source-charset='' username='admin' />
+          </named-connection>
+          <named-connection caption='kosdaq' name='excel-direct.0g7751b1tznd4s18cfliu0irve0j'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/SDA11/Desktop/Private/Yeyoung70/Project/final_ESG/SQL/kosdaq.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='excel-direct.0g7751b1tznd4s18cfliu0irve0j' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:N1719:no:A1:N1719:0' header='yes' outcome='2'>
+            <column datatype='string' name='고유번호' ordinal='0' />
+            <column datatype='integer' name='종목코드' ordinal='1' />
+            <column datatype='string' name='회사명' ordinal='2' />
+            <column datatype='string' name='업종' ordinal='3' />
+            <column datatype='string' name='주요제품' ordinal='4' />
+            <column datatype='integer' name='상장일' ordinal='5' />
+            <column datatype='string' name='결산월' ordinal='6' />
+            <column datatype='string' name='대표자명' ordinal='7' />
+            <column datatype='string' name='홈페이지' ordinal='8' />
+            <column datatype='string' name='지역' ordinal='9' />
+            <column datatype='string' name='사업자등록번호' ordinal='10' />
+            <column datatype='string' name='주소' ordinal='11' />
+            <column datatype='string' name='업종코드' ordinal='12' />
+            <column datatype='string' name='설립일' ordinal='13' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='excel-direct.0g7751b1tznd4s18cfliu0irve0j' name='Sheet1' table='[Sheet1$]' type='table'>
+            <columns gridOrigin='A1:N1719:no:A1:N1719:0' header='yes' outcome='2'>
+              <column datatype='string' name='고유번호' ordinal='0' />
+              <column datatype='integer' name='종목코드' ordinal='1' />
+              <column datatype='string' name='회사명' ordinal='2' />
+              <column datatype='string' name='업종' ordinal='3' />
+              <column datatype='string' name='주요제품' ordinal='4' />
+              <column datatype='integer' name='상장일' ordinal='5' />
+              <column datatype='string' name='결산월' ordinal='6' />
+              <column datatype='string' name='대표자명' ordinal='7' />
+              <column datatype='string' name='홈페이지' ordinal='8' />
+              <column datatype='string' name='지역' ordinal='9' />
+              <column datatype='string' name='사업자등록번호' ordinal='10' />
+              <column datatype='string' name='주소' ordinal='11' />
+              <column datatype='string' name='업종코드' ordinal='12' />
+              <column datatype='string' name='설립일' ordinal='13' />
+            </columns>
+          </relation>
+          <relation connection='mariadb.0s6ozgc0ydobot1a0em8i18qs4zg' name='tb_disproduct' table='[tb_disproduct]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:N1719:no:A1:N1719:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>고유번호</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[고유번호]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>고유번호</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>종목코드</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[종목코드]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>종목코드</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>회사명</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[회사명]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>회사명</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>업종</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[업종]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>업종</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>주요제품</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[주요제품]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>주요제품</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>상장일</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[상장일]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>상장일</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>결산월</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[결산월]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>결산월</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>대표자명</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[대표자명]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>대표자명</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>홈페이지</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[홈페이지]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>홈페이지</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>지역</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[지역]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>지역</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>사업자등록번호</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[사업자등록번호]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>사업자등록번호</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>주소</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[주소]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>주소</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>업종코드</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[업종코드]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>업종코드</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>설립일</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[설립일]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>설립일</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LKO_RKR_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Sheet1_66EB496E197B4B479568F86DB3EFB553]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[ID]</local-name>
+            <parent-name>[tb_disproduct]</parent-name>
+            <remote-alias>ID</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tb_disproduct_21E3F58A102A433B813F9586542018E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>company</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[company]</local-name>
+            <parent-name>[tb_disproduct]</parent-name>
+            <remote-alias>company</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tb_disproduct_21E3F58A102A433B813F9586542018E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>18</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[tb_disproduct]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>5</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_SMALLINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_USHORT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tb_disproduct_21E3F58A102A433B813F9586542018E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>recall</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[recall]</local-name>
+            <parent-name>[tb_disproduct]</parent-name>
+            <remote-alias>recall</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tb_disproduct_21E3F58A102A433B813F9586542018E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[tb_disproduct]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation charset='296' flag='1' name='LROOT_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_VARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_CHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tb_disproduct_21E3F58A102A433B813F9586542018E6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[ID]' role='dimension' type='ordinal' />
+      <_.fcp.ObjectModelTableType.true...column caption='Sheet1' datatype='table' name='[__tableau_internal_object_id__].[Sheet1_66EB496E197B4B479568F86DB3EFB553]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='tb_disproduct' datatype='table' name='[__tableau_internal_object_id__].[tb_disproduct_21E3F58A102A433B813F9586542018E6]' role='measure' type='quantitative' />
+      <column caption='Company' datatype='string' name='[company]' role='dimension' type='nominal' />
+      <column caption='Date' datatype='integer' name='[date]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Recall' datatype='string' name='[recall]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[결산월]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[대표자명]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[사업자등록번호]' role='dimension' type='nominal' />
+      <column datatype='integer' hidden='true' name='[상장일]' role='measure' type='quantitative' />
+      <column datatype='string' hidden='true' name='[설립일]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[업종코드]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[주소]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[지역]' role='dimension' type='nominal' />
+      <column datatype='string' hidden='true' name='[홈페이지]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;South Korea&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Sheet1' id='Sheet1_66EB496E197B4B479568F86DB3EFB553'>
+            <properties context=''>
+              <relation connection='excel-direct.0g7751b1tznd4s18cfliu0irve0j' name='Sheet1' table='[Sheet1$]' type='table'>
+                <columns gridOrigin='A1:N1719:no:A1:N1719:0' header='yes' outcome='2'>
+                  <column datatype='string' name='고유번호' ordinal='0' />
+                  <column datatype='integer' name='종목코드' ordinal='1' />
+                  <column datatype='string' name='회사명' ordinal='2' />
+                  <column datatype='string' name='업종' ordinal='3' />
+                  <column datatype='string' name='주요제품' ordinal='4' />
+                  <column datatype='integer' name='상장일' ordinal='5' />
+                  <column datatype='string' name='결산월' ordinal='6' />
+                  <column datatype='string' name='대표자명' ordinal='7' />
+                  <column datatype='string' name='홈페이지' ordinal='8' />
+                  <column datatype='string' name='지역' ordinal='9' />
+                  <column datatype='string' name='사업자등록번호' ordinal='10' />
+                  <column datatype='string' name='주소' ordinal='11' />
+                  <column datatype='string' name='업종코드' ordinal='12' />
+                  <column datatype='string' name='설립일' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='tb_disproduct' id='tb_disproduct_21E3F58A102A433B813F9586542018E6'>
+            <properties context=''>
+              <relation connection='mariadb.0s6ozgc0ydobot1a0em8i18qs4zg' name='tb_disproduct' table='[tb_disproduct]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[회사명]' />
+              <expression op='[company]' />
+            </expression>
+            <first-end-point object-id='Sheet1_66EB496E197B4B479568F86DB3EFB553' />
+            <second-end-point object-id='tb_disproduct_21E3F58A102A433B813F9586542018E6' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1+ (Multiple Connections)' name='federated.0ks54c31e410qo1ccty1i0k2b73g' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ks54c31e410qo1ccty1i0k2b73g'>
+            <_.fcp.ObjectModelTableType.false...column caption='tb_disproduct' datatype='integer' name='[__tableau_internal_object_id__].[tb_disproduct_21E3F58A102A433B813F9586542018E6]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[tb_disproduct_21E3F58A102A433B813F9586542018E6]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:tb_disproduct_21E3F58A102A433B813F9586542018E6:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='tb_disproduct' datatype='table' name='[__tableau_internal_object_id__].[tb_disproduct_21E3F58A102A433B813F9586542018E6]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' center='1.0' field='[federated.0ks54c31e410qo1ccty1i0k2b73g].[__tableau_internal_object_id__].[cnt:tb_disproduct_21E3F58A102A433B813F9586542018E6:qk]' palette='gold_purple_diverging_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0ks54c31e410qo1ccty1i0k2b73g].[__tableau_internal_object_id__].[cnt:tb_disproduct_21E3F58A102A433B813F9586542018E6:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{115613FC-BF9C-4338-8A4C-7BB14BF28289}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ks54c31e410qo1ccty1i0k2b73g].[__tableau_internal_object_id__].[cnt:tb_disproduct_21E3F58A102A433B813F9586542018E6:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ks54c31e410qo1ccty1i0k2b73g].[max:company:nk]</field>
+            <field>[federated.0ks54c31e410qo1ccty1i0k2b73g].[max:회사명:nk]</field>
+            <field>[federated.0ks54c31e410qo1ccty1i0k2b73g].[min:회사명:nk]</field>
+            <field>[federated.0ks54c31e410qo1ccty1i0k2b73g].[none:company:nk]</field>
+            <field>[federated.0ks54c31e410qo1ccty1i0k2b73g].[none:업종:nk]</field>
+            <field>[federated.0ks54c31e410qo1ccty1i0k2b73g].[none:회사명:nk]</field>
+            <field>[federated.0ks54c31e410qo1ccty1i0k2b73g].[sum:date:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4E20FF4D-1501-4923-84F4-0E84F3D5C149}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='24' name='Sheet 1' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAYCAYAAABKtPtEAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAAW0lEQVRYhe3SsQ2AQAwEQUB0TDf0QI2mBDIm+J3YwerkfWZmW9ihA7QG0AFaA+gArQF0
+      gHZ+HTzX/UcHs/wHNIAO0BpAB2gNoAO0BtABWgPoAK0BdIDWADpAewH4dAXoJPIhzQAAAABJ
+      RU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
