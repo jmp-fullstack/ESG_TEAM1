@@ -6,6 +6,8 @@
 *.json
 *.twbx
 *config*
+*.txt
+*.csv
 
 
 ### Database ###
