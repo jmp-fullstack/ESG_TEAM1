@@ -122,4 +122,43 @@ class MariaDB:
             traceback.print_exc()
             self.DB.rollback()
             return False
+
+
+    def update(self, table:str, set_columns:list[str], set_values:list[str], where_column:str, where_value) -> bool:
+        """
+        Update
         
+        example)
+        table = "Students"
+        set_column = ["name"]
+        set_value = ["jason"]
+        where_column = "id"
+        where_value = "1"
+        """
+
+        set_statement = ', '.join('{}="{}"'.format(sc, sv) for sc, sv in zip(set_columns, set_values))
+        sql = "UPDATE {0} " \
+            "SET {1} " \
+            "WHERE {2}={3};".format(table, set_statement, where_column, where_value)
+        try:
+            with self.DB.cursor() as cur:
+                cur.execute(sql)
+                self.DB.commit()
+            return True
+        except:
+            traceback.print_exc()
+            self.DB.rollback()
+            return False
+        
+
+    def truncate(self, table:str, forcing=True) -> bool:
+        """
+        truncate table
+        """
+        try:
+            with self.DB.cursor() as cursor:
+                cursor.execute(f'SET FOREIGN_KEY_CHECKS = {int(forcing)}; TRUNCATE TABLE {table};')
+                self.DB.commit()
+                return True
+        except:
+            return False
