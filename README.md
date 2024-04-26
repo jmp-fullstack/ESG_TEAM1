@@ -1,5 +1,28 @@
-`0. 키워드 추출`
+<div align=center><h1>📚 STACKS</h1></div>
+
+<div align=center> 
+
+  <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
+  <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
+  <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white"> 
+  <img src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> 
+  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
+  <img src="https://img.shields.io/badge/Scrapy-007396?style=for-the-badge&logo=Scrapy&logoColor=white">
+  <img src="https://img.shields.io/badge/Selenium-007396?style=for-the-badge&logo=Selenium&logoColor=white">
+  <img src="https://img.shields.io/badge/Docker-007396?style=for-the-badge&logo=Docker&logoColor=white">
+  <img src="https://img.shields.io/badge/Pytorch-007396?style=for-the-badge&logo=Pytorch&logoColor=white">
+  <img src="https://img.shields.io/badge/Kobert-007396?style=for-the-badge&logo=Kobert&logoColor=white">
+  <img src="https://img.shields.io/badge/sklearn-007396?style=for-the-badge&logo=sklearn&logoColor=white">
+  <img src="https://img.shields.io/badge/Tableau-007396?style=for-the-badge&logo=Tableau&logoColor=white">
+
+  
+  
+</div>
+
+`0. 키워드 추출`  
 **sustainable_management_report_crawling.ipynb**  
+
 《K-ESG 가이드라인 v1.0》의 진단항목명을 통해 추출한 키워드 → SEED  WORD  로 사용  
 
 | E keyword | S keyword | G keyword |
