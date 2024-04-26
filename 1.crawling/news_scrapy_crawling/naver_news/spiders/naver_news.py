@@ -3,17 +3,18 @@ from bs4 import BeautifulSoup
 import json
 import re
 from naver_news.items import NaverNewsItem
-
-
+import datetime
 with open('./keywords/kosdaq기업목록.csv', encoding='utf-8') as company_f:
     companys = [lines.rstrip() for lines in company_f.readlines()]
+current_datetime = datetime.datetime.now()
+
 
 class naver_news(scrapy.Spider):
     name = "naver_news"
 
     def start_requests(self):
-        for year in range(2019,2023):
-            for month in range(1,13):
+        for year in range(2019,2021):
+            for month in range(1,12):
                 if month in [4, 6, 9, 11]:
                     e_day = '30'
                 elif month == 2:
@@ -90,8 +91,10 @@ class naver_news(scrapy.Spider):
         if date_str:
             if '. ' in date_str:
                 date = date_str.split('. ')[0]
+                date = date.split('.')[0]
             else:
                 date = date_str.split(' ')[0]
+                date = date.split('.')[0]
         else:
             date = None
 
