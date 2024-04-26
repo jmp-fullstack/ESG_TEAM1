@@ -1,0 +1,1 @@
+0 0 * * * cd /app && scrapy crawl naver_news >> /var/log/cron.log 2>&1
