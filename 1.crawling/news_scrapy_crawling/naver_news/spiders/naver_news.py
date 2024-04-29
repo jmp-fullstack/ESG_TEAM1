@@ -13,33 +13,33 @@ class naver_news(scrapy.Spider):
     name = "naver_news"
 
     def start_requests(self):
-        for year in range(2019,2021):
-            for month in range(1,12):
-                if month in [4, 6, 9, 11]:
-                    e_day = '30'
-                elif month == 2:
-                    e_day = '29' if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else '28'
-                else:
-                    e_day = '31'
+        # for year in range(2019,2021):
+            # for month in range(1,12):
+                # if month in [4, 6, 9, 11]:
+                #     e_day = '30'
+                # elif month == 2:
+                #     e_day = '29' if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0) else '28'
+                # else:
+                #     e_day = '31'
 
-                for company in companys:
-                    url = (
-                        'https://s.search.naver.com/p/newssearch/search.naver?'
-                        f'cluster_rank=1&'
-                        f'de={year}.{month}.{e_day}&'
-                        f'ds={year}.{month}.01&'
-                        'is_dts=0&'
-                        'nqx_theme=%7B%22theme%22%3A%7B%22main%22%3A%7B%22name%22%3A%22stock%22%7D%7D%7D&'
-                        f'nso=so:r,p:from{year}{month:02d}01to{year}{month:02d}{e_day},a:all&'
-                        f'nx_and_query={company}&'
-                        f'nx_search_query={company}&'
-                        f'query=+{company}&'
-                        'sort=0&'
-                        f'start=1&'
-                        'where=news_tab_api&'
-                        'nso=so:r,p:all,a:all'
-                    )
-                    yield scrapy.Request(url=url, callback=self.parse_url, meta={'company': company, 'page_count': 1})
+        for company in companys:
+            url = (
+                'https://s.search.naver.com/p/newssearch/search.naver?'
+                f'cluster_rank=1&'
+                f'de={current_datetime.year}.{current_datetime.month}.{current_datetime.day}&'
+                f'ds={current_datetime.year}.{current_datetime.month}.01&'
+                'is_dts=0&'
+                'nqx_theme=%7B%22theme%22%3A%7B%22main%22%3A%7B%22name%22%3A%22stock%22%7D%7D%7D&'
+                f'nso=so:r,p:from{current_datetime.year}{current_datetime.month:02d}01to{current_datetime.year}{current_datetime.month:02d}{current_datetime.day},a:all&'
+                f'nx_and_query={company}&'
+                f'nx_search_query={company}&'
+                f'query=+{company}&'
+                'sort=0&'
+                f'start=1&'
+                'where=news_tab_api&'
+                'nso=so:r,p:all,a:all'
+            )
+            yield scrapy.Request(url=url, callback=self.parse_url, meta={'company': company, 'page_count': 1})
 
     def parse_url(self, response):
         if response.meta['page_count'] > 2:
