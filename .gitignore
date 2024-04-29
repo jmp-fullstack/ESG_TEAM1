@@ -8,7 +8,7 @@
 *config*
 *.txt
 *.csv
-
+.env
 
 ### Database ###
 *.accdb
