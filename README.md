@@ -12,7 +12,6 @@
   <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
   <img src="https://img.shields.io/badge/Scrapy-007396?style=for-the-badge&logo=Scrapy&logoColor=white">
   <img src="https://img.shields.io/badge/Selenium-007396?style=for-the-badge&logo=Selenium&logoColor=white">
-  <img src="https://img.shields.io/badge/Docker-007396?style=for-the-badge&logo=Docker&logoColor=white">
   <img src="https://img.shields.io/badge/Pytorch-007396?style=for-the-badge&logo=Pytorch&logoColor=white">
   <img src="https://img.shields.io/badge/Kobert-007396?style=for-the-badge&logo=Kobert&logoColor=white">
   <img src="https://img.shields.io/badge/sklearn-007396?style=for-the-badge&logo=sklearn&logoColor=white">
