@@ -1,0 +1,37 @@
+version: "3"
+
+services:
+  crawler:
+    container_name: crawler
+    build:
+      context: ./1.crawling/news_scrapy_crawling
+      dockerfile: Dockerfile
+    environment:
+      PYTHONUNBUFFERED: 1
+      TZ: Asia/Seoul
+    volumes:
+      - "~/workspace/docker/data/:/var/lib/crawling/data"
+
+  preprocess:
+    container_name: preprocess
+    build:
+      context: ./2.preprocessing/news_preprocessing
+      dockerfile: Dockerfile
+    env_file: .env
+    environment:
+      PYTHONUNBUFFERED: 1
+      TZ: Asia/Seoul
+    depends_on:
+      - crawler
+    volumes:
+      - "~/workspace/docker/data/:/var/lib/crawling/data"
+
+  mariadb:
+    container_name: mariadb
+    image: myapp:latest
+    env_file: .env
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:

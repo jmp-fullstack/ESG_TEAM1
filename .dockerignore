@@ -1,0 +1,5 @@
+.vscode/
+*.ipynb
+*.csv
+*.json
+*config
