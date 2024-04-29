@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=KOSDAQ%ESG%평가%대쉬보드&fontSize=50&animation=fadeIn" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=KOSDAQ+ESG+평가+대쉬보드&fontSize=50&animation=fadeIn" />
 
 <img src="/image.png/메인페이지.JPG" width="1000" height="800">
 <div align=center><h1>📚 STACKS</h1></div>
