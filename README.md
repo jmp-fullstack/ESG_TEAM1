@@ -1,5 +1,6 @@
-![태블로 이미지](https://github.com/jmp-fullstack/ESG_TEAM1/assets/157558163/dbd62518-6c9e-456f-b854-fd52f0741b00)
 
+
+<img src="/image.png/메인페이지.JPG" width="1000" height="800">
 <div align=center><h1>📚 STACKS</h1></div>
 
 <div align=center> 
@@ -138,9 +139,12 @@ KIPRIS 특허사이트에 특허정보 검색
 ---  
 ---
 
-`3. 데이터베이스 구축`
+`3. 데이터베이스 구축`   
 
-👉🏻 [PIGMA]( https://www.figma.com/file/JCsHi4bsYPblqg4Ecw2V9g/ESG-Tableau-Dashboard?type=design&node-id=0-1&mode=design)    
+👉🏻 [ERD CLOUD](https://www.erdcloud.com/d/53ceCuGvDutkGREKx)       
+👉🏻 [PIGMA]( https://www.figma.com/file/JCsHi4bsYPblqg4Ecw2V9g/ESG-Tableau-Dashboard?type=design&node-id=0-1&mode=design)  
+
+<img src="/image.png/ERD.PNG" width="1100" height="700">
 
 **Tableau Architecture기반으로 ERD설계 및 데이터베이스 구축**  
 
@@ -322,11 +326,13 @@ Tableau_ESG_Dashboard_public용.twb
 | B. 종합 ESG점수 top3 기업, 급등 ESG점수 top3 기업, 급락 ESG점수 top3 기업 | 
 | C. E, S, G별 점수 기업 리스트와 대표 키워드를 나타내는 워드클라우드| 
 | D. 급등/급락 ESG 비교 그래프, 업종별 ESG점수 변동 추이, ESG등급 비율 추이| 
+<img src="/image.png/메인페이지.JPG" width="1100" height="700">
 
 | 랭킹 카테고리| 
 |-----------|
 | A. 전체 기업들의 ESG등수와 등급 및 전년대비 점수를 한눈에 알아볼 수 있도록 구성 | 
 | B. Total, Environment, Social, Governance 별 랭킹 리스트 | 
+<img src="/image.png/랭킹카테고리.JPG" width="1100" height="700">
 
 | 기업 상세 페이지| 
 |-----------|
@@ -335,6 +341,7 @@ Tableau_ESG_Dashboard_public용.twb
 | C. E,S,G 점수에 따라 나타나는 다각형 그래프| 
 | D. E,S,G 막대그래프로 연도별 ESG 변동 추이 표현| 
 | E. 키워드를 통해 나타난 긍/부정 비율로 기업 인식 제고| 
+<img src="/image.png/상세기업페이지.JPG" width="1100" height="700">
 
 
 **4. 대시보드 연동**
