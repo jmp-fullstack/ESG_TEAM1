@@ -18,29 +18,9 @@
   <img src="https://img.shields.io/badge/sklearn-007396?style=for-the-badge&logo=sklearn&logoColor=white">
   <img src="https://img.shields.io/badge/Tableau-007396?style=for-the-badge&logo=Tableau&logoColor=white">
 
-  
-  
 </div>
 
-`0. 키워드 추출`  
-**sustainable_management_report_crawling.ipynb**
 
-《K-ESG 가이드라인 v1.0》의 진단항목명을 통해 추출한 키워드 → SEED  WORD  로 사용  
-
-| E keyword | S keyword | G keyword |
-|-----------|-----------|------------|
-|    36개   |    50개   |    56개    |
-
-**esg_keyword_extraction.ipynb**   
-
-👉🏻 [지속가능 경영 보고서](https://esg.krx.co.kr)  
-
-SEED WORD 기반으로 《지속가능경영보고서》에서 키워드 추출 → 뉴스 텍스트를 E, S, G 항목으로 분류할 때 사용  
-코스피200에 속한 회사 중 110개의 회사의 지속가능경영보고서(pdf 366개)에서 추출된 213,973개의 문장에서 키워드 추출  
-
-| E keyword | S keyword | G keyword |
-|-----------|-----------|------------|
-|    261개   |    213개   |    240개    |
 
 ---  
 ---
@@ -65,7 +45,7 @@ S,G에 특화된 잡플래닛 리뷰텍스트와 수치 데이터 크롤링
 |-----------|-----------|  
 
 
-**Naver_news_crawling**    
+**Naver_news_crawling.ipynb**    
 
 👉🏻 [네이버 뉴스](https://news.naver.com)   
 
@@ -118,6 +98,25 @@ KIPRIS 특허사이트에 특허정보 검색
 ---
 
 `2. 전처리`
+
+**sustainable_management_report_crawling.ipynb**
+
+《K-ESG 가이드라인 v1.0》의 진단항목명을 통해 추출한 키워드 → SEED  WORD  로 사용  
+
+| E keyword | S keyword | G keyword |
+|-----------|-----------|------------|
+|    36개   |    50개   |    56개    |
+
+**esg_keyword_extraction.ipynb**   
+
+👉🏻 [지속가능 경영 보고서](https://esg.krx.co.kr)  
+
+SEED WORD 기반으로 《지속가능경영보고서》에서 키워드 추출 → 뉴스 텍스트를 E, S, G 항목으로 분류할 때 사용  
+코스피200에 속한 회사 중 110개의 회사의 지속가능경영보고서(pdf 366개)에서 추출된 213,973개의 문장에서 키워드 추출  
+
+| E keyword | S keyword | G keyword |
+|-----------|-----------|------------|
+|    261개   |    213개   |    240개    |
 
 **bert_train_preprocessing.ipynb**
 	
@@ -211,7 +210,7 @@ ex)
 ---  
 ---
 
-`5. 점수 할당`
+`5. SCORE 계산`
 
 
 
