@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=KOSDAQ%ESG%평가%대쉬보드&fontSize=50&animation=fadeIn" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=KOSDAQ+ESG+평가+대쉬보드&fontSize=50&animation=fadeIn" />
 
 <img src="/image.png/메인페이지.JPG" width="1000" height="800">
 <div align=center><h1>📚 STACKS</h1></div>
@@ -71,11 +71,13 @@ KIPRIS 특허사이트에 특허정보 검색
 
 - 환경기술산업 원스톱 서비스(ECO SQUARE)의 녹색제품 인증기업 수집     
 - 녹색 제품 종류 3가지를 모두 통합 후 기업 별, 연도 별 가산점 책정   
+
 | 환경표지 | GR(재활용) | 저탄소인증 |   
 |-----------|-----------|------------|    
 
 
 - 크롤링 대상 : 4512개의 녹색제품 -> 코스닥에 속한 56개의 회사를 선별 -> 해당 코스닥 기업에 E 가산점 부여      
+
 | 회사명 | 인증연도 | 제품명 |   
 |-----------|-----------|------------|    
 
