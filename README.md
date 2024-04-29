@@ -31,8 +31,8 @@
 |-----------|-----------|------------|
 |    36개   |    50개   |    56개    |
 
-**esg_keyword_extraction.ipynb**
-
+**esg_keyword_extraction.ipynb**   
+👉🏻 [지속가능 경영 보고서](https://esg.krx.co.kr)        
 SEED WORD 기반으로 《지속가능경영보고서》에서 키워드 추출 → 뉴스 텍스트를 E, S, G 항목으로 분류할 때 사용  
 코스피200에 속한 회사 중 110개의 회사의 지속가능경영보고서(pdf 366개)에서 추출된 213,973개의 문장에서 키워드 추출  
 
@@ -44,7 +44,8 @@ SEED WORD 기반으로 《지속가능경영보고서》에서 키워드 추출 
 
 `1. 크롤링`
 
-**Kosdaq_jobplanet_crawler.ipynb**
+**Kosdaq_jobplanet_crawler.ipynb**    
+👉🏻 [잡플래닛](https://www.jobplanet.co.kr/job)     
 S,G에 특화된 잡플래닛 리뷰텍스트와 수치 데이터 크롤링   
 
 수치 데이터(11개 항목)    
@@ -59,15 +60,15 @@ S,G에 특화된 잡플래닛 리뷰텍스트와 수치 데이터 크롤링
 |-----------|-----------|  
 
 
-**Naver_news_crawling**
-
+**Naver_news_crawling**    
+👉🏻 [네이버 뉴스](https://news.naver.com)         
 | kobert train data |kobert test data |  
 |-----------|-----------|   
 | KOSPI 200 기업명 + 키워드 년도 별 기사 모음 (100,987 개) | 1718개 KOSDAQ 기업별 + 키워드 + 19\~24년 + 1\~12 월 기사모음 (594,200 개) |    
 
 
-**Patent_report_crawling.ipynb**  
-
+**Patent_report_crawling.ipynb**      
+👉🏻 [KIPRIS](https://www.kipris.or.kr)         
 KIPRIS 특허사이트에 특허정보 검색   
 
 | 1718개의 코스닥 기업의 특허 내용, 출원일자, 등록일자, 크롤링 (16414개) |    
@@ -75,7 +76,8 @@ KIPRIS 특허사이트에 특허정보 검색
 
 
 
-**Green_company_crawl.ipynb**
+**Green_company_crawl.ipynb**   
+👉🏻 [ECO SQUARE](https://ecosq.or.kr)          
 
 환경기술산업 원스톱 서비스(ECO SQUARE)의 녹색제품 인증기업 수집  
 
@@ -87,7 +89,8 @@ KIPRIS 특허사이트에 특허정보 검색
 
 녹색제품 존재 여부에 따라 전체 코스닥 기업의 E 가산점 부여   
 
-**Recall_company_crawl.ipynb**
+**Recall_company_crawl.ipynb**   
+👉🏻 [국가기술 표준원(KATS)](https://www.kats.go.kr/main.do)          
 
 국가기술 표준원(KATS)의 유해기업 수집   
 
@@ -123,6 +126,7 @@ KIPRIS 특허사이트에 특허정보 검색
 
 `3. 데이터베이스 구축`
 
+👉🏻 [PIGMA]( https://www.figma.com/file/JCsHi4bsYPblqg4Ecw2V9g/ESG-Tableau-Dashboard?type=design&node-id=0-1&mode=design)     
 **Tableau Architecture기반으로 ERD설계 및 데이터베이스 구축**  
 
 ---
