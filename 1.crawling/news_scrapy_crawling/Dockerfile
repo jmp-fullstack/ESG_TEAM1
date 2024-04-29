@@ -1,11 +1,12 @@
 FROM python:3.9-slim
-WORKDIR /app
+
+WORKDIR /var/lib/crawling/data
 
 # 파일 복사
 COPY . /app
 
-# cron 설치
-RUN apt-get update && apt-get -y install cron
+# cron과 tz설치
+RUN apt-get update && apt-get install -y cron tzdata
 
 # Cron 작업 설정
 COPY crontab /etc/cron.d/scrapy-cron
