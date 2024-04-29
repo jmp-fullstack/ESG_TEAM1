@@ -1,4 +1,4 @@
-
+![태블로 이미지](https://github.com/jmp-fullstack/ESG_TEAM1/assets/157558163/dbd62518-6c9e-456f-b854-fd52f0741b00)
 
 <div align=center><h1>📚 STACKS</h1></div>
 
