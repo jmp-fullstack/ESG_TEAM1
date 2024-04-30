@@ -1,29 +1,37 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=KOSDAQ+ESG+평가+대쉬보드&fontSize=50&animation=fadeIn" />
-
-<img src="/image.png/메인페이지.JPG" width="1000" height="800">
-<div align=center><h1>📚 STACKS</h1></div>
-
-<div align=center> 
-
-  <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white"> 
-  <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white"> 
-  <img src="https://img.shields.io/badge/mariaDB-003545?style=for-the-badge&logo=mariaDB&logoColor=white"> 
-  <img src="https://img.shields.io/badge/amazonaws-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white"> 
-  <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
-  <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-  <img src="https://img.shields.io/badge/Scrapy-007396?style=for-the-badge&logo=Scrapy&logoColor=white">
-  <img src="https://img.shields.io/badge/Selenium-007396?style=for-the-badge&logo=Selenium&logoColor=white">
-  <img src="https://img.shields.io/badge/Pytorch-007396?style=for-the-badge&logo=Pytorch&logoColor=white">
-  <img src="https://img.shields.io/badge/Kobert-007396?style=for-the-badge&logo=Kobert&logoColor=white">
-  <img src="https://img.shields.io/badge/sklearn-007396?style=for-the-badge&logo=sklearn&logoColor=white">
-  <img src="https://img.shields.io/badge/Tableau-007396?style=for-the-badge&logo=Tableau&logoColor=white">
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=KOSDAQ+ESG+평가+대시보드&fontSize=35&animation=fadeIn" />
+<div align=center>
+<img src="/image.png/메인페이지.JPG" width="600" height="400">
+</div>
+<div>
+<h2><h2>
+</div>
+<div align=center>
+<h3>📚 Teck Stacks<h3>
+</div>
+<br>
+<div align="center">
+	<img src="https://img.shields.io/badge/sklearn-003366?style=flat&logo=sklearnB&logoColor=white" />
+  <img src="https://img.shields.io/badge/Pytorch-EE4C2C?style=flat&logo=Pytorch&logoColor=white" />
+</div>
+<div align="center">
+	<img src="https://img.shields.io/badge/MariaDB-003545?style=flat&logo=MariaDB&logoColor=white" />
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=AmazonAWS&logoColor=white" />
+  <img src="https://img.shields.io/badge/Google Colab-F9AB00?style=flat&logo=Google Colab&logoColor=white" />
+</div>
+<br>
+<div align="center">
+  <img src="https://img.shields.io/badge/Tableau-E97627?style=flat&logo=Tableau&logoColor=white" />
+</div>
+<div align="center">
+  <img src="https://img.shields.io/badge/git-F05032?style=flat&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white" />
+  <img src="https://img.shields.io/badge/Notion-000000?style=flat&logo=Notion&logoColor=white" />
 </div>
 
+<div align=center>
+<h2><h2>
+</div>
 
-
----  
----
 
 `1. 크롤링`
 
@@ -145,7 +153,7 @@ SEED WORD 기반으로 《지속가능경영보고서》에서 키워드 추출 
 👉🏻 [ERD CLOUD](https://www.erdcloud.com/d/53ceCuGvDutkGREKx)       
 👉🏻 [PIGMA]( https://www.figma.com/file/JCsHi4bsYPblqg4Ecw2V9g/ESG-Tableau-Dashboard?type=design&node-id=0-1&mode=design)  
 
-<img src="/image.png/ERD.PNG" width="1100" height="700">
+<img src="/image.png/ERD.PNG" width="600" height="400">
 
 **Tableau Architecture기반으로 ERD설계 및 데이터베이스 구축**  
 
@@ -301,7 +309,7 @@ G : (bert_g + job_g + 다트점수)/45\*100
 
 **점수 결과 형태**
 
-<img src="/image.png/total_score.png" width="1700" height="300">
+<img src="/image.png/total_score.png" width="700" height="180">
 
 
 ---   
@@ -332,13 +340,13 @@ Tableau_ESG_Dashboard_public용.twb
 | B. 종합 ESG점수 top3 기업, 급등 ESG점수 top3 기업, 급락 ESG점수 top3 기업 | 
 | C. E, S, G별 점수 기업 리스트와 대표 키워드를 나타내는 워드클라우드| 
 | D. 급등/급락 ESG 비교 그래프, 업종별 ESG점수 변동 추이, ESG등급 비율 추이| 
-<img src="/image.png/메인페이지.JPG" width="1100" height="700">
+<img src="/image.png/메인페이지.JPG" width="600" height="400">
 
 | 랭킹 카테고리| 
 |-----------|
 | A. 전체 기업들의 ESG등수와 등급 및 전년대비 점수를 한눈에 알아볼 수 있도록 구성 | 
 | B. Total, Environment, Social, Governance 별 랭킹 리스트 | 
-<img src="/image.png/랭킹카테고리.JPG" width="1100" height="700">
+<img src="/image.png/랭킹카테고리.JPG" width="600" height="400">
 
 | 기업 상세 페이지| 
 |-----------|
@@ -347,7 +355,7 @@ Tableau_ESG_Dashboard_public용.twb
 | C. E,S,G 점수에 따라 나타나는 다각형 그래프| 
 | D. E,S,G 막대그래프로 연도별 ESG 변동 추이 표현| 
 | E. 키워드를 통해 나타난 긍/부정 비율로 기업 인식 제고| 
-<img src="/image.png/상세기업페이지.JPG" width="1100" height="700">
+<img src="/image.png/상세기업페이지.JPG" width="600" height="400">
 
 
 **4. 대시보드 연동**
