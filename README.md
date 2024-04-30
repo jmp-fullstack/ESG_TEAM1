@@ -151,7 +151,7 @@ SEED WORD 기반으로 《지속가능경영보고서》에서 키워드 추출 
 `3. 데이터베이스 구축`   
 
 👉🏻 [ERD CLOUD](https://www.erdcloud.com/d/53ceCuGvDutkGREKx)       
-👉🏻 [PIGMA]( https://www.figma.com/file/JCsHi4bsYPblqg4Ecw2V9g/ESG-Tableau-Dashboard?type=design&node-id=0-1&mode=design)  
+👉🏻 [PIGMA]( https://www.figma.com/file/DhxOgXePlMSGTrwthDzg8D/ESG-Tableau-Dashboard?type=design&node-id=0%3A1&mode=design&t=YZp0d8WbFG6lifL6-1)  
 
 <img src="/image.png/ERD.PNG" width="800" height="500">
 
@@ -316,6 +316,8 @@ G : (bert_g + job_g + 다트점수)/45\*100
 ---
 
 `6. Tableau 시각화`
+
+👉🏻 [Tableau]( https://public.tableau.com/shared/M67ZK26GZ?:display_count=n&:origin=viz_share_link)  
 
 Tableau_ESG_Dashboard_public용.twb
 전문적인 시각화 차트 Tableau를 사용하여 기업별 ESG 지표 대시보드 생성
