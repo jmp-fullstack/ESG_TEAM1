@@ -1,6 +1,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=KOSDAQ+ESG+평가+대시보드&fontSize=35&animation=fadeIn" />
 <div align=center>
-<img src="/image.png/메인페이지.JPG" width="600" height="400">
+<img src="/image.png/메인페이지.JPG" width="800" height="580">
 </div>
 <div>
 <h2><h2>
@@ -153,7 +153,7 @@ SEED WORD 기반으로 《지속가능경영보고서》에서 키워드 추출 
 👉🏻 [ERD CLOUD](https://www.erdcloud.com/d/53ceCuGvDutkGREKx)       
 👉🏻 [PIGMA]( https://www.figma.com/file/JCsHi4bsYPblqg4Ecw2V9g/ESG-Tableau-Dashboard?type=design&node-id=0-1&mode=design)  
 
-<img src="/image.png/ERD.PNG" width="600" height="400">
+<img src="/image.png/ERD.PNG" width="800" height="500">
 
 **Tableau Architecture기반으로 ERD설계 및 데이터베이스 구축**  
 
@@ -309,7 +309,7 @@ G : (bert_g + job_g + 다트점수)/45\*100
 
 **점수 결과 형태**
 
-<img src="/image.png/total_score.png" width="700" height="180">
+<img src="/image.png/total_score.png" width="900" height="200">
 
 
 ---   
@@ -340,13 +340,13 @@ Tableau_ESG_Dashboard_public용.twb
 | B. 종합 ESG점수 top3 기업, 급등 ESG점수 top3 기업, 급락 ESG점수 top3 기업 | 
 | C. E, S, G별 점수 기업 리스트와 대표 키워드를 나타내는 워드클라우드| 
 | D. 급등/급락 ESG 비교 그래프, 업종별 ESG점수 변동 추이, ESG등급 비율 추이| 
-<img src="/image.png/메인페이지.JPG" width="600" height="400">
+<img src="/image.png/메인페이지.JPG" width="800" height="580">
 
 | 랭킹 카테고리| 
 |-----------|
 | A. 전체 기업들의 ESG등수와 등급 및 전년대비 점수를 한눈에 알아볼 수 있도록 구성 | 
 | B. Total, Environment, Social, Governance 별 랭킹 리스트 | 
-<img src="/image.png/랭킹카테고리.JPG" width="600" height="400">
+<img src="/image.png/랭킹카테고리.JPG" width="800" height="580">
 
 | 기업 상세 페이지| 
 |-----------|
@@ -355,7 +355,7 @@ Tableau_ESG_Dashboard_public용.twb
 | C. E,S,G 점수에 따라 나타나는 다각형 그래프| 
 | D. E,S,G 막대그래프로 연도별 ESG 변동 추이 표현| 
 | E. 키워드를 통해 나타난 긍/부정 비율로 기업 인식 제고| 
-<img src="/image.png/상세기업페이지.JPG" width="600" height="400">
+<img src="/image.png/상세기업페이지.JPG" width="800" height="580">
 
 
 **4. 대시보드 연동**
